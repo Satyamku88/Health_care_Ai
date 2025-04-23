@@ -1,0 +1,32 @@
+.emergency-sos {
+    padding: 20px;
+    text-align: center;
+}
+  
+.emergency-sos h1 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+  
+.emergency-sos p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+  
+.sos-button {
+    background: #d32f2f;
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    outline: none;
+}
+  
+.sos-button:hover {
+    background: #b71c1c;
+}

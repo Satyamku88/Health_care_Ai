@@ -1,0 +1,56 @@
+.medicine-reminder {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .medicine-reminder h1 {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  .medicine-reminder p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #45a049;
+  }

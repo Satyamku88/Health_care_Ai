@@ -1,0 +1,31 @@
+.offline-access {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .offline-access h1 {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  .offline-access p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #45a049;
+  }

@@ -1,0 +1,77 @@
+.emergency-sos {
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.emergency-sos h1 {
+  font-size: 2.5rem;
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.sos-button {
+  background: #d32f2f;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 20px 0;
+}
+
+.sos-button:hover {
+  background: #b71c1c;
+}
+
+.button-disabled {
+  background: #757575 !important;
+  cursor: not-allowed;
+}
+
+.status {
+  padding: 15px;
+  margin: 20px 0;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+}
+
+.protocol-steps {
+  text-align: left;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.protocol-steps h3 {
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.protocol-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.protocol-steps li {
+  padding: 10px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.protocol-steps li.completed {
+  background: #dff0d8;
+  color: #3c763d;
+}
