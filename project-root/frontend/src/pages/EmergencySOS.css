@@ -75,3 +75,60 @@
   background: #dff0d8;
   color: #3c763d;
 }
+
+/* Add these styles */
+.favorites-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.number-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.number-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.number-input button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.saved-numbers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.saved-numbers li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f8f8;
+  border-radius: 4px;
+}
+
+.saved-numbers button {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}

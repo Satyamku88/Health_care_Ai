@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './EmergencySOS.css';
 
 const EmergencySOS = () => {
+  const [newNumber, setNewNumber] = useState('');
+  const [savedNumbers, setSavedNumbers] = useState([]);
+
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [completedSteps, setCompletedSteps] = useState({
@@ -10,6 +13,7 @@ const EmergencySOS = () => {
     calls: false,
   });
 
+
   // Twilio configuration (replace with your actual credentials)
   const TWILIO = {
     ACCOUNT_SID: 'ACa06709340704c56b70de4d2453afc5fd',
@@ -17,6 +21,16 @@ const EmergencySOS = () => {
     PHONE_NUMBER: '+12542326944'
   };
 
+   const removeNumber = (numberToRemove) => {
+    const updatedNumbers = savedNumbers.filter(num => num !== numberToRemove);
+    setSavedNumbers(updatedNumbers);
+    localStorage.setItem('emergencyNumbers', JSON.stringify(updatedNumbers));
+  };
+
+
+
+
+  
   // Verified emergency contacts
   const CONTACTS = {
     FAMILY: ['+916202361088', '+916201946642'],
@@ -70,11 +84,14 @@ const EmergencySOS = () => {
     const locationLink = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
     const message = `🚨 EMERGENCY ALERT! 🚨\n\nMy current location: ${locationLink}\n\nPlease send help immediately!`;
 
+    if (savedNumbers.length === 0) {
+      throw new Error('No emergency numbers saved!');
+    }
+
     try {
-      await Promise.all([
-        ...CONTACTS.FAMILY.map(number => sendTwilioSMS(number, message)),
-        sendTwilioSMS(CONTACTS.AMBULANCE, `AMBULANCE REQUIRED! ${message}`)
-      ]);
+      await Promise.all(
+        savedNumbers.map(number => sendTwilioSMS(number, message))
+      );
     } catch (error) {
       throw new Error('Failed to send alerts: ' + error.message);
     }
@@ -151,6 +168,7 @@ const EmergencySOS = () => {
       </button>
 
       {status && <div className="status">{status}</div>}
+      
 
       <div className="protocol-steps">
         <h3>Emergency Protocol Activation:</h3>
@@ -166,7 +184,9 @@ const EmergencySOS = () => {
           </li>
         </ul>
       </div>
+      
     </div>
+    
   );
 };
 
